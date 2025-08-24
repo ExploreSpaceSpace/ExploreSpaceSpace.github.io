@@ -13,3 +13,4 @@ ExploreSpaceSpace.github.io
 ### 2025.08.24
 - 创建github仓库以托管个人博客
 - 创建文章页面
+- 增加文章作者与发表时间显示
