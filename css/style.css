@@ -60,6 +60,20 @@ body { /* 页面主体 */
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+.post-author { /* 文章作者 */
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.post-time{ /* 文章时间 */
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #000;
+}
+
 .post-meta { /* 文章数据 */
   display: flex;
   align-items: center;
