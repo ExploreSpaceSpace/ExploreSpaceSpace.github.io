@@ -1,0 +1,48 @@
+/* 霓虹灯 */
+.neon-light {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.neon-light span {
+position: relative;
+width: 25px;
+height: 3px;
+}
+
+.neon-light span:before {
+content: ' ';
+position: absolute;
+inset: 0;
+animation: neon-light-flicker 8s linear infinite;
+animation-delay: calc(var(--i) * 0.03s);
+}
+
+@keyframes neon-light-flicker {
+0% {
+  background:#0f0;
+  box-shadow: 0 0 5px #0f0,
+  0 0 15px #0f0,
+  0 0 25px #0f0,
+  0 0 35px #0f0;
+  transform-origin: bottom;
+  filter: hue-rotate(360deg);
+}
+100% {
+  background:#0f0;
+  box-shadow: 0 0 5px #0f0,
+  0 0 15px #0f0,
+  0 0 25px #0f0,
+  0 0 35px #0f0;
+  transform-origin: bottom;
+}
+}
+
+/* 背景动画 */
+@keyframes gradientBG {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
+}

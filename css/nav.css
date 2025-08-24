@@ -1,0 +1,14 @@
+/* 便签 */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 34px;
+  font-weight: 700;
+  color: white;
+}

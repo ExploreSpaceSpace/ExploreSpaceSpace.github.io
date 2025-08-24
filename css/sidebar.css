@@ -1,0 +1,132 @@
+/* 侧边栏 */
+.sidebar {
+  width: 300px;
+  padding: 30px;
+  position: relative;
+  height: fit-content;
+  left: 0;
+}
+
+.profile { /* 个人资料 */
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile img { /* 头像 */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 15px;
+}
+
+.profile h2 { /* 名称 */
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.profile p { /* 标签 */
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.sidebar-section { /* 侧边栏模块 */
+  margin-bottom: 25px;
+}
+
+.sidebar-section h3 { /* 标题 */
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links { /* 导航链接 */
+  list-style: none;
+}
+
+.nav-links li { /* 导航链接项 */
+  margin-bottom: 10px;
+}
+
+/* 导航链接 */
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+.nav-links i { /* 图标 */
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.tags { /* 标签 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 标签项 */
+.tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.tag:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* 社交链接 */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+      width: 100%;
+      position: relative;
+      top: 0;
+  }
+}

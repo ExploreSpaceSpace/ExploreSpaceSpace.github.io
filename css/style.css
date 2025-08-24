@@ -1,0 +1,163 @@
+* { /* 全局样式 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body { /* 页面主体 */
+  background: linear-gradient(45deg, #5a0eac, #1b4faa, #326fa3, #006c71);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container { /* 内容容器 */
+  display: flex;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.glass-ground { /* 玻璃效果 */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* 隐藏滚动条 */
+}
+
+.main-content { /* 主内容 */
+  flex: 1;
+}
+
+.blog-post { /* 文章 */
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: transform 0.3s ease;
+  color: white;
+}
+
+.blog-post:hover { /* 文章悬停 */
+  transform: translateY(-5px);
+}
+
+.post-header { /* 文章头部 */
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.post-title { /* 文章标题 */
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.post-meta { /* 文章数据 */
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.post-meta span { /* 文章数据标签 */
+  display: flex;
+  align-items: center;
+}
+
+.post-meta i { /* 文章元数据图标 */
+  margin-right: 5px;
+}
+
+.post-content { /* 文章内容 */
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.post-content p { /* 文章内容段落 */
+  margin-bottom: 15px;
+}
+
+.read-more { /* 阅读更多 */
+  display: inline-block;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.read-more:hover { /* 阅读更多悬停 */
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 992px) { /* 手机屏幕 */
+  .container {
+      flex-direction: column;
+  }
+}
+
+footer { /* 页脚 */
+  text-align: center;
+  padding: 30px;
+  margin-top: 50px;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 20px;
+      z-index: 1000;
+  }
+  
+  .nav-menu.active {
+      display: flex;
+  }
+  
+  .mobile-menu-btn {
+      display: block;
+  }
+  
+  .post-meta {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+  }
+  
+  .contributions-chart {
+      height: 100px;
+  }
+  
+  .contribution-day {
+      width: 10px;
+      height: 10px;
+  }
+  
+  .github-contributions-svg {
+      width: 100%;
+      height: auto;
+  }
+}
