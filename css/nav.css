@@ -7,6 +7,15 @@
   margin-bottom: 30px;
 }
 
+.nav:hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: #1b203359;
+}
+
 .logo {
   font-size: 34px;
   font-weight: 700;

@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #5a0eac;
+  --deep-blue-color: #1b4faa;
+  --light-blue-color: #326fa3;
+  --deep-green-color: #006c71;
+}
+
 * { /* 全局样式 */
   margin: 0;
   padding: 0;
@@ -6,7 +13,7 @@
 }
 
 body { /* 页面主体 */
-  background: linear-gradient(45deg, #5a0eac, #1b4faa, #326fa3, #006c71);
+  background: linear-gradient(45deg, var(--primary-color), var(--deep-blue-color), var(--light-blue-color), var(--deep-green-color));
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
   color: #333;
@@ -22,14 +29,42 @@ body { /* 页面主体 */
   gap: 30px;
 }
 
-.glass-ground { /* 玻璃效果 */
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* 隐藏滚动条 */
+.glass-ground {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) brightness(110%);
+  -webkit-backdrop-filter: blur(12px) brightness(110%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.glass-ground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 16px;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glass-ground:hover::before {
+  opacity: 1;
+}
+
+.glass-ground:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 
+    0 12px 36px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
 .main-content { /* 主内容 */
@@ -152,7 +187,6 @@ footer { /* 页脚 */
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       padding: 20px;
-      z-index: 1000;
   }
   
   .nav-menu.active {

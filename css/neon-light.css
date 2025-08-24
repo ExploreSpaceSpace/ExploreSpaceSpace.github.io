@@ -4,6 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: -1;
 }
 
 .neon-light span {
@@ -45,4 +46,20 @@ animation-delay: calc(var(--i) * 0.03s);
 0% { background-position: 0% 50%; }
 50% { background-position: 100% 50%; }
 100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) { /* 平板 */
+  .neon-light span {
+    position: relative;
+    width: 10px;
+    height: 3px;
+  }
+}
+
+@media (max-width: 480px) { /* 手机 */
+  .neon-light span {
+    position: relative;
+    width: 5px;
+    height: 3px;
+  }
 }

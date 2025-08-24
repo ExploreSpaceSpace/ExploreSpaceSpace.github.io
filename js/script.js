@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // GitHub API获取
 async function loadGitHubData() {
-  // const username = 'ExploreSpaceSpace';
+  // const username = 'ExploreSpaceSpace'; // 访问次数限制1h内60次 测试用 上传时记得改回去
   const reposUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
 
   // 加载中
