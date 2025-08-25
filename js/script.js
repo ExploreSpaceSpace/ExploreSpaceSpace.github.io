@@ -1,7 +1,20 @@
 // 加载
 document.body.style.overflow = 'hidden'; // 隐藏滚动
-$(window).on('load', function() { // 加载完毕
-  $('.loader-wrapper').fadeOut("slow"); // 隐藏加载动画
+const loading = {
+  container: document.querySelector('.loading-wrapper'),
+  in(target) {
+    this.container.classList.remove('loading-out');
+    setTimeout(() => {
+      window.location.href = target;
+    }, 1000);
+  },
+  out() {
+    this.container.classList.add('loading-out');
+  }
+};
+
+window.addEventListener('load', () => {
+  loading.out();
   document.body.style.overflow = 'auto'; // 显示滚动
 });
 
